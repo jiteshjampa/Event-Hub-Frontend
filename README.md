@@ -1,37 +1,174 @@
-## Github Backend Repository: https://github.com/jiteshjampa/Event-Hub
+# Event Management Dashboard
 
+Welcome to the **Event Management Dashboard**! This project aims to streamline the process of managing events, attendees, and task assignments efficiently.
 
-## Getting Started
+## **Project Overview**
+This web-based application allows users to:
+- **Event Management:** Perform CRUD operations for events, including adding, editing, and deleting events.
+- **Attendee Management:** Manage attendees by viewing, adding, or removing them, and assigning attendees to specific events or tasks.
+- **Task Tracker:** Track tasks related to events and update task statuses with visual progress indicators.
 
-First, run the development server:
+The application is built with:
+- **Next.js** for frontend development.
+- **Tailwind CSS** for responsive design.
+- **shadcn** components for UI.
+- **Lucide React** for icons.
 
+---
+
+## **Table of Contents**
+1. [Installation](#installation)
+2. [Folder Structure](#folder-structure)
+3. [Features](#features)
+4. [API Integration](#api-integration)
+5. [Usage Instructions](#usage-instructions)
+6. [UI Components](#ui-components)
+7. [Development Guidelines](#development-guidelines)
+
+---
+
+## **Installation**
+
+Follow these steps to set up the project locally:
+
+### **1. Clone the Repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-repo/event-management-dashboard.git
+cd event-management-dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **2. Install Dependencies:**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **3. Start the Development Server:**
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **4. Environment Variables:**
+Create a `.env.local` file in the root directory and configure the following variables:
+```plaintext
+MONGODB_URI=your_mongo_connection_string
+NEXT_PUBLIC_API_URL=your_api_base_url
+```
 
-## Learn More
+### **5. Backend Integration:**
+Ensure the backend API is running locally or hosted remotely to connect with the frontend.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Folder Structure**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```plaintext
+src/
+|-- app/
+|   |-- auth/
+|   |   |-- login/page.js
+|   |   |-- register/page.js
+|   |-- attendees/page.js
+|   |-- dashboard/page.js
+|   |-- events/page.js
+|   |-- tasks/page.js
+|-- components/
+|   |-- Navbar.js
+|   |-- EventDetails.js
+|   |-- Events.js
+|   |-- Attendees.js
+|   |-- Tasks.js
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Features**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **1. Event Management Page:**
+- List all events with add, edit, and delete functionality.
+- Display event details such as name, description, location, and date.
+
+### **2. Attendee Management Page:**
+- View, add, and remove attendees.
+- Assign attendees to events or tasks.
+
+### **3. Task Tracker Page:**
+- Display tasks associated with events.
+- Update task statuses between "Pending" and "Completed."
+
+---
+
+## **API Integration**
+
+The following RESTful APIs are used to support frontend functionality:
+
+### **1. Event Management API:**
+- `POST /api/events`: Create a new event
+- `GET /api/events`: Retrieve all events
+- `PUT /api/events/:id`: Update an event
+- `DELETE /api/events/:id`: Delete an event
+
+### **2. Attendee Management API:**
+- `POST /api/attendees`: Add a new attendee
+- `GET /api/attendees`: Get all attendees
+- `DELETE /api/attendees/:id`: Remove an attendee
+
+### **3. Task Management API:**
+- `POST /api/tasks`: Create a task
+- `GET /api/tasks/:eventId`: Get tasks for a specific event
+- `PUT /api/tasks/:taskId`: Update task status
+
+---
+
+## **Usage Instructions**
+
+### **1. Event Management:**
+- Navigate to the "Events" page.
+- Add a new event by clicking the **Add Event** button and filling out the form.
+- Edit or delete events using the corresponding buttons.
+
+### **2. Attendee Management:**
+- Navigate to the "Attendees" page.
+- Add attendees by filling out the form.
+- Assign attendees to specific events or tasks.
+
+### **3. Task Tracker:**
+- Navigate to the "Tasks" page.
+- View and update task statuses for events.
+
+---
+
+## **UI Components**
+- **Navbar:** Provides navigation across different sections.
+- **EventDetails:** Displays detailed information for a selected event.
+- **Events:** Handles event management features.
+- **Attendees:** Manages attendee functions.
+- **Tasks:** Manages task tracking and status updates.
+
+---
+
+## **Development Guidelines**
+
+### **1. Form Validation:**
+- All fields are required for creating or updating events and attendees.
+- Ensure valid date formats for event creation.
+- Display error messages in red when validation fails.
+
+### **2. Loading Indicators:**
+- Use loading indicators while API calls are in progress.
+
+### **3. Success/Error Messages:**
+- Provide user feedback for successful or failed operations.
+
+---
+
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## **Contributing**
+Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
+
+### **Contact**
+For issues or suggestions, please contact us via [GitHub Issues](https://github.com/your-repo/issues).
+
