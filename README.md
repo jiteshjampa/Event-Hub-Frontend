@@ -1,3 +1,5 @@
+# Backend Repository
+https://github.com/jiteshjampa/Event-Hub
 # Event Management Dashboard
 
 Welcome to the **Event Management Dashboard**! This project aims to streamline the process of managing events, attendees, and task assignments efficiently.
