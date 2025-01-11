@@ -163,16 +163,4 @@ The following RESTful APIs are used to support frontend functionality:
 ### **3. Success/Error Messages:**
 - Provide user feedback for successful or failed operations.
 
----
-
-## **License**
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## **Contributing**
-Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
-
-### **Contact**
-For issues or suggestions, please contact us via [GitHub Issues](https://github.com/your-repo/issues).
 
