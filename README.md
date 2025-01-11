@@ -1,3 +1,5 @@
+# Video demo
+https://www.loom.com/share/2e8eb0a2d63a4529bb323bb2b7a8a2a1?sid=dd313cd8-6629-4ab0-95fb-ccef5fea9e62
 # Backend Repository
 https://github.com/jiteshjampa/Event-Hub
 # Event Management Dashboard
